@@ -1,0 +1,14 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#profilegrid {
+    /* border: solid 2px salmon; */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(3, 300px);
+}
