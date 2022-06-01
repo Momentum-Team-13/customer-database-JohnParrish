@@ -12,3 +12,11 @@ h1 {
     grid-template-columns: repeat(4, 300px);
     grid-template-rows: repeat(3, 300px);
 }
+
+.name {
+    text-transform: capitalize;
+}
+
+.profilepic {
+    border-radius: 10px;
+}

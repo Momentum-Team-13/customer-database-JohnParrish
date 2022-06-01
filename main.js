@@ -1,4 +1,4 @@
-console.log(customers)
+console.log(usStates)
 
 const profilegrid = document.querySelector("#profilegrid");
 
@@ -29,12 +29,12 @@ for (let customer of customers) {
 
     let birthElement = document.createElement("p")
     birthElement.classList.add("DOB")
-    birthElement.innerText = `DOB: ${customer.dob.date}`
+    birthElement.innerText = `DOB: ${moment(customer.dob.date).format("MMMM Do YYYY")}`
     customerElement.appendChild(birthElement)
 
     let sinceElement = document.createElement("p")
     sinceElement.classList.add("customersince")
-    sinceElement.innerText = `Customer since: ${customer.registered.date}`
+    sinceElement.innerText = `Customer since: ${moment(customer.registered.date).format("MMMM Do YYYY")}`
     customerElement.appendChild(sinceElement)
     
     profilegrid.appendChild(customerElement)
