@@ -23,18 +23,19 @@ for (let customer of customers) {
     customerElement.appendChild(emailElement)
     
     let addyElement = document.createElement("p")
+    let stateAbbr = (nameToAbbr(customer.location.state))
     addyElement.classList.add("address")
-    addyElement.innerText = `${customer.location.street.number} ${customer.location.street.name} ${customer.location.city}, ${customer.location.state} ${customer.location.postcode}`
+    addyElement.innerText = `${customer.location.street.number} ${customer.location.street.name} ${customer.location.city}, ${stateAbbr} ${customer.location.postcode}`
     customerElement.appendChild(addyElement)
 
     let birthElement = document.createElement("p")
     birthElement.classList.add("DOB")
-    birthElement.innerText = `DOB: ${moment(customer.dob.date).format("MMMM Do YYYY")}`
+    birthElement.innerText = `DOB: ${moment(customer.dob.date).format("MMM Do YYYY")}`
     customerElement.appendChild(birthElement)
 
     let sinceElement = document.createElement("p")
     sinceElement.classList.add("customersince")
-    sinceElement.innerText = `Customer since: ${moment(customer.registered.date).format("MMMM Do YYYY")}`
+    sinceElement.innerText = `Customer since: ${moment(customer.registered.date).format("MMM Do YYYY")}`
     customerElement.appendChild(sinceElement)
     
     profilegrid.appendChild(customerElement)
